@@ -43,7 +43,10 @@ public class NinjaControllerTest {
 	}
 	@Test
 	public void savewishTest() throws Exception{
+		System.out.println("inside test savewish method");
 		this.mockMvc.perform(get("/ninja/getSpeaker/rajesh")).andExpect(status().is2xxSuccessful());
+	
 	}
+	
 
 }
