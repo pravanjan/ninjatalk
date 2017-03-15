@@ -25,6 +25,7 @@ public class NinjaHelper {
 			if(speaker != null){
 				resultMap.put("status", true);
 				resultMap.put("result", speaker);
+				logger.info("hi how are you ");
 
 			}
 			else {
