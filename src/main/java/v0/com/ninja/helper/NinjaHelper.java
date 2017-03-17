@@ -62,5 +62,10 @@ public class NinjaHelper {
 	public static String getTalk(String  name){
 		return  TalkHelper.getTalkStatic(name);
 	}
+	
+	private String computeSpeaker(String speaker){
+		logger.info("The is a private method ");
+		return "hello"+speaker;
+	}
 
 }

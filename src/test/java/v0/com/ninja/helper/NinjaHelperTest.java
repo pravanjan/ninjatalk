@@ -14,6 +14,7 @@ import org.junit.runners.MethodSorters;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+import org.powermock.reflect.Whitebox;
 
 import v0.com.ninja.datamodel.NinjaDAO;
 import v0.com.ninja.jdo.Speaker;
@@ -64,6 +65,15 @@ public class NinjaHelperTest {
 		PowerMockito.mockStatic(NinjaDAO.class);
 		PowerMockito.when(NinjaDAO.getSpeaker((any(String.class)))).thenReturn(speaker);
 		assertEquals(true,helper.getSpeaker("pravanjan").get("status"));
+
+	}
+	@Test
+	public void privateMethodtest() throws Exception {
+		NinjaHelper truckSpy = PowerMockito.spy(helper);
+		PowerMockito.doReturn("Okay pravanjan").when(truckSpy,"computeSpeaker","pravanjan");
+		
+		//Whitebox.invokeMethod(NinjaHelper.class, "computeSpeaker");
+		
 
 	}
 	
