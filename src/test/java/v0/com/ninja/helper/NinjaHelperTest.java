@@ -16,6 +16,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import v0.com.ninja.datamodel.NinjaDAO;
+import v0.com.ninja.jdo.Speaker;
 
 
 @RunWith(PowerMockRunner.class)
@@ -25,17 +26,17 @@ import v0.com.ninja.datamodel.NinjaDAO;
 
 public class NinjaHelperTest {
 	
-	
+	static NinjaHelper helper = null;
 	@BeforeClass	
 	public static void setup() {
+		helper = new NinjaHelper();
 	}
 
 	@Test
 	public void atestwithmokitoSpy() {
 		final TalkHelper  talk = spy(new TalkHelper());
-		doReturn("Dont call me agina... ..... ").when(talk).getTalk("pravanjan");
-		NinjaHelper helper = new NinjaHelper();
-		assertEquals("Dont call me agina... .....",helper.getTalk(talk, "pravanjan"));
+		doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
+		assertEquals("Dont call me agina",helper.getTalk(talk, "pravanjan"));
 	}
 	
 	@Test
@@ -57,9 +58,12 @@ public class NinjaHelperTest {
 	}
 	@Test
 	public void dtestDAO() {
+		Speaker  speaker = new Speaker();
+		speaker.setId("sdfsdfsfsf");
+		speaker.setName("pravanjan");
 		PowerMockito.mockStatic(NinjaDAO.class);
-		PowerMockito.when(NinjaDAO.getSpeaker((any(String.class)))).the;
-		assertEquals("pravanjan",NinjaHelper.getTalk("pravanjan"));
+		PowerMockito.when(NinjaDAO.getSpeaker((any(String.class)))).thenReturn(speaker);
+		assertEquals(true,helper.getSpeaker("pravanjan").get("status"));
 
 	}
 	
