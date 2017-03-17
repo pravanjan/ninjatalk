@@ -25,6 +25,7 @@ public class NinjaHelper {
 			if(speaker != null){
 				resultMap.put("status", true);
 				resultMap.put("result", speaker);
+				logger.info("hi how are you ");
 
 			}
 			else {
@@ -44,5 +45,22 @@ public class NinjaHelper {
 		return resultMap;
 	}
 	
+	
+	public String getTalk(TalkHelper talk , String name ) {
+		try{
+			 return  talk.getTalk(name);
+			
+			
+		}
+		catch(Exception e){
+			logger.log(Level.ERROR,"\n An error has occured while persisting : " + "\n", e);
+		}
+		
+		return "";
+	}
+	
+	public static String getTalk(String  name){
+		return  TalkHelper.getTalkStatic(name);
+	}
 
 }

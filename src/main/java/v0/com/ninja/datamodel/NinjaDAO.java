@@ -20,15 +20,16 @@ public class NinjaDAO {
 	
 	
 	
-	public Speaker getSpeaker(String name ) {
+	public static Speaker getSpeaker(String name ) {
 		PersistenceManager  pm = PersistenceManagerUtil.getPersistanceManager();
 
 		Speaker speaker = null;
 		try {
+			logger.info("step list  *********** ");
+
 					
 			Query query = pm.newQuery(Speaker.class,"name =='"+name+"'");
 			List<Speaker> spList = (List<Speaker>) query.execute();
-			logger.info("step list  *********** "+spList);
 
 			spList = (List<Speaker>) pm.detachCopyAll(spList);
 			if(spList != null && spList.size() > 0){
