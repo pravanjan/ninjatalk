@@ -1,4 +1,5 @@
-package ninjatalk;
+package v0.com.ninja.controller;
+
 
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
