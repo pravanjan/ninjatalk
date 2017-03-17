@@ -16,6 +16,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 import v0.com.ninja.datamodel.NinjaDAO;
+import v0.com.ninja.jdo.Speaker;
 
 
 @RunWith(PowerMockRunner.class)
@@ -58,7 +59,7 @@ public class NinjaHelperTest {
 	@Test
 	public void dtestDAO() {
 		PowerMockito.mockStatic(NinjaDAO.class);
-		PowerMockito.when(NinjaDAO.getSpeaker((any(String.class)))).the;
+		PowerMockito.when(NinjaDAO.getSpeaker((any(String.class)))).thenReturn(any(Speaker.class));
 		assertEquals("pravanjan",NinjaHelper.getTalk("pravanjan"));
 
 	}
