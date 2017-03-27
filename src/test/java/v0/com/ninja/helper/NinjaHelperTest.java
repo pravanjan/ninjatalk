@@ -72,7 +72,6 @@ public class NinjaHelperTest {
 		NinjaHelper truckSpy = PowerMockito.spy(helper);
 		PowerMockito.doReturn("Okay pravanjan").when(truckSpy,"computeSpeaker","pravanjan");
 		
-		//Whitebox.invokeMethod(NinjaHelper.class, "computeSpeaker");
 		
 
 	}
