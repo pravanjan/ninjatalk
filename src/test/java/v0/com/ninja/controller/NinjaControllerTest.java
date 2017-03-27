@@ -31,7 +31,6 @@ public class NinjaControllerTest {
 	@Autowired
 	private WebApplicationContext wac;
 	private MockMvc mockMvc;
-	private MockMvc mockStandAlong;
 	
 	@Before
 	public void setUp(){
@@ -44,7 +43,6 @@ public class NinjaControllerTest {
 	}
 	@Test
 	public void savewishTest() throws Exception{
-		System.out.println("inside test savewish method");
 		this.mockMvc.perform(get("/ninja/getSpeaker/rajesh")).andExpect(status().is2xxSuccessful());
 	
 	}
