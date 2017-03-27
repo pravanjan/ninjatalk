@@ -19,9 +19,10 @@ public class PaymentProcessorTest {
 	
 	@Test
 	public void makePaymentTest() {
-		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
 		
 		assertEquals(true, paymentProcessor.processPayment(50));
+		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
+
 		
 	}
 
