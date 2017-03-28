@@ -101,6 +101,16 @@ dependencies {
 jacoco{
    toolVersion ='0.7.5.201505241946'
 }
+jacocoTestReport {
+   reports {
+   html.enabled =true
+   }
+   afterEvaluate {
+    classDirectories = files(classDirectories.files.collect{
+     fileTree(dir: it, exclude : ['v0/com/ninja/jdo/**'])
+    })
+   }
+}
 
 test {
   testLogging.showStandardStreams = true
