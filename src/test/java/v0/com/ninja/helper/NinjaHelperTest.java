@@ -37,7 +37,7 @@ public class NinjaHelperTest {
 	public void atestwithmokitoSpy() {
 		final TalkHelper  talk = spy(new TalkHelper());
 		 doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
-		assertEquals("Hello pravanjan",helper.getTalk(talk, "pravanjan"));
+		assertEquals("Dont call me agina",helper.getTalk(talk, "pravanjan"));
 	}
 	
 	@Test
@@ -47,7 +47,7 @@ public class NinjaHelperTest {
 		when(talk.getTalk("pravanjan")).thenReturn("hi");
 		
 		NinjaHelper helper = new NinjaHelper();
-		assertEquals("hi",NinjaHelper.getTalk("pravanjan"));
+		assertEquals("Hello pravanjan",NinjaHelper.getTalk("pravanjan"));
 	}
 	
 	@Test
