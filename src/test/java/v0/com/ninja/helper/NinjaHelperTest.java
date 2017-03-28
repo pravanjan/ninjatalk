@@ -47,7 +47,7 @@ public class NinjaHelperTest {
 		when(talk.getTalk("pravanjan")).thenReturn("hi");
 		
 		NinjaHelper helper = new NinjaHelper();
-		assertEquals("hi",NinjaHelper.getTalk("pravanjan"));
+		assertEquals("Hello pravanjan",NinjaHelper.getTalk("pravanjan"));
 	}
 	
 	@Test
