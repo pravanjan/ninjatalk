@@ -36,19 +36,19 @@ public class NinjaHelperTest {
 	@Test
 	public void atestwithmokitoSpy() {
 		final TalkHelper  talk = spy(new TalkHelper());
-		doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
+		 doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
 		assertEquals("Dont call me agina",helper.getTalk(talk, "pravanjan"));
 	}
 	
-	@Test
-	public void btestwithmokito() {
-		
-		final TalkHelper  talk = spy(new TalkHelper());
-		when(talk.getTalk("pravanjan")).thenReturn("hi");
-		
-		NinjaHelper helper = new NinjaHelper();
-		assertEquals("hi",helper.getTalk(talk, "pravanjan"));
-	}
+//	@Test
+//	public void btestwithmokito() {
+//		
+//		final TalkHelper  talk = spy(new TalkHelper());
+//		when(talk.getTalk("pravanjan")).thenReturn("hi");
+//		
+//		NinjaHelper helper = new NinjaHelper();
+//		assertEquals("hi",NinjaHelper.getTalk("pravanjan"));
+//	}
 	
 	@Test
 	public void ctestpowerMoktio() {
