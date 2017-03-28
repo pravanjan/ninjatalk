@@ -36,7 +36,7 @@ public class NinjaHelperTest {
 	@Test
 	public void atestwithmokitoSpy() {
 		final TalkHelper  talk = spy(new TalkHelper());
-		doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
+		 doReturn("Dont call me agina").when(talk).getTalk("pravanjan");
 		assertEquals("Dont call me agina",helper.getTalk(talk, "pravanjan"));
 	}
 	
