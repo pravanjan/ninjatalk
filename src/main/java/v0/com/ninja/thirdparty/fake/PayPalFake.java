@@ -6,8 +6,8 @@ public class PayPalFake implements PaymentType {
 
 	@Override
 	public Boolean makePayment(int amount) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return true;
 	}
 
 	@Override
