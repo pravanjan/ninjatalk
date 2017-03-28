@@ -40,15 +40,15 @@ public class NinjaHelperTest {
 		assertEquals("Dont call me agina",helper.getTalk(talk, "pravanjan"));
 	}
 	
-	@Test
-	public void btestwithmokito() {
-		
-		final TalkHelper  talk = spy(new TalkHelper());
-		when(talk.getTalk("pravanjan")).thenReturn("hi");
-		
-		NinjaHelper helper = new NinjaHelper();
-		assertEquals("hi",NinjaHelper.getTalk("pravanjan"));
-	}
+//	@Test
+//	public void btestwithmokito() {
+//		
+//		final TalkHelper  talk = spy(new TalkHelper());
+//		when(talk.getTalk("pravanjan")).thenReturn("hi");
+//		
+//		NinjaHelper helper = new NinjaHelper();
+//		assertEquals("hi",NinjaHelper.getTalk("pravanjan"));
+//	}
 	
 	@Test
 	public void ctestpowerMoktio() {
