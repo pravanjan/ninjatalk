@@ -15,33 +15,35 @@ public class PaymentProcessorTest {
 	
 	public static PaymentProcessor paymentProcessor = null;
 	private static final Logger logger = Logger.getLogger(PaymentProcessorTest.class.getPackage().getName());
+	
+	
 	@BeforeClass 
 	public static  void beforeTest(){
 		paymentProcessor = new PaymentProcessor(new PayPalFake());
 	}
 	
-//	@Test
-//	public void makePaymentTest() {
-//		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
-//
-//		assertEquals(true, paymentProcessor.processPayment(50));
-//
-//		
-//	}
-//	
-//	@Test
-//	public void testWithMokito() {
-//		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
-//		PayPal paypal = Mockito.mock(PayPal.class);
-//		paymentProcessor = new PaymentProcessor(paypal);
-//
-//		 when(paypal.makePayment(30)).thenReturn(true);
-//
-//		assertEquals(true, paymentProcessor.processPayment(30));
-//
-//		
-//	}
-//	
+	@Test
+	public void makePaymentTest() {
+		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
+
+		assertEquals(true, paymentProcessor.processPayment(50));
+
+		
+	}
+	
+	@Test
+	public void testWithMokito() {
+		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));
+		PayPal paypal = Mockito.mock(PayPal.class);
+		paymentProcessor = new PaymentProcessor(paypal);
+
+		 when(paypal.makePayment(30)).thenReturn(true);
+
+		assertEquals(true, paymentProcessor.processPayment(30));
+
+		
+	}
+	
 	@Test
 	public void spyIt() {
 		logger.info("The payment processor resposne "+paymentProcessor.processPayment(30));

@@ -7,4 +7,9 @@ public class PayPal implements  PaymentType {
 		return false;
 	}
 
+	@Override
+	public void deletePayment(String id) {
+		
+	}
+
 }

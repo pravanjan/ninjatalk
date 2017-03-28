@@ -7,4 +7,9 @@ public class Stripe implements PaymentType {
 		return true;
 	}
 
+	@Override
+	public void deletePayment(String id) {
+		
+	}
+
 }
