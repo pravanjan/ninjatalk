@@ -12,7 +12,7 @@ public class PayPalFake implements PaymentType {
 
 	@Override
 	public void deletePayment(String id) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
