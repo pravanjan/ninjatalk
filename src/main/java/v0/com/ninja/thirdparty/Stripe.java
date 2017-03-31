@@ -9,7 +9,7 @@ public class Stripe implements PaymentType {
 
 	@Override
 	public void deletePayment(String id) {
-		
+	
 	}
 
 }
