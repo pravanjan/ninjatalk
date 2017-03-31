@@ -1,6 +1,7 @@
 apply plugin: 'war'
 apply plugin: 'appengine'
 apply plugin: 'jacoco'
+apply plugin: 'com.google.gcloud-preview'
 import com.google.appengine.AppEnginePlugin
 
 
