@@ -9,7 +9,6 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.*;
 
 import v0.com.ninja.thirdparty.PayPal;
-import v0.com.ninja.thirdparty.fake.PayPalFake;
 
 public class PaymentProcessorTest {
 	public static PaymentProcessor paymentProcessor   = null ;
