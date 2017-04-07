@@ -13,8 +13,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import v0.com.ninja.thirdparty.PayPal;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest({PaymentHelper.class})
+
 public class PaymentProcessorTest {
 	
 	
