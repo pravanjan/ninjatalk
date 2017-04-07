@@ -15,7 +15,17 @@ import v0.com.ninja.thirdparty.PayPal;
 
 
 public class PaymentProcessorTest {
+	public static PaymentProcessor paymentProcessor = null;
 	
+	@BeforeClass
+	public void setup(){
+		paymentProcessor =  PaymentProcessor(new PayPal());
+	}
+	
+	@Test
+	public void paypaltest (){
+		assertEquals(true,paymentProcessor.makePayment(30));
+	}
 
 	
 
