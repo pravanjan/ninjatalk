@@ -4,7 +4,7 @@ public class Stripe implements PaymentType {
 
 	@Override
 	public Boolean makePayment(int amount) {
-		return true;
+		return false;
 	}
 
 	@Override
