@@ -11,19 +11,7 @@ import static org.mockito.Mockito.*;
 import v0.com.ninja.thirdparty.PayPal;
 
 public class PaymentProcessorTest {
-	public static PaymentProcessor paymentProcessor   = null ;
-	@BeforeClass
-	public static void setup(){
-		//paymentProcessor = new PaymentProcessor(new PayPalFake());
-	}
-	@Test
-	public void testPayment(){
-		PayPal fakepaypal = Mockito.mock(PayPal.class);
-		paymentProcessor = new PaymentProcessor(fakepaypal);
-		 when(fakepaypal.makePayment(30)).thenReturn(true);
-		
-		assertEquals(true, paymentProcessor.makePayment(30));
-	}
+	
 	
 
 }
