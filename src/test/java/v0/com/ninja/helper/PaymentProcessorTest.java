@@ -16,12 +16,7 @@ import v0.com.ninja.thirdparty.PayPal;
 
 public class PaymentProcessorTest {
 	
-	
-	
-	
-    
-	
-	
+
 	
 
 }
